@@ -1,0 +1,184 @@
+#mapviewTable {
+	width: 100%;
+	height: auto;
+}
+#mapviewTable .wrappingCell {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#mapviewTable .headerTable {
+	background-color: #e6eaef;
+	border-left:1px solid #b3c0cc;
+	border-right:1px solid #b3c0cc;
+	border-top:1px solid #b3c0cc;  
+}
+#mapviewTable .lowerCell {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	width: 100%;
+	height: 100%; 
+}
+#mapviewTable .VEmapHolder {
+	border-left:1px solid #b3c0cc;
+	border-right:1px solid #b3c0cc;
+	border-top:1px solid #b3c0cc;
+	border-bottom:1px solid #b3c0cc;
+}
+
+/*
+myMap is the id given to the
+background image and is for
+display purposes
+*/
+#myMap {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#hotspots {
+	position:absolute;
+	left:17px; 
+	top:300px; 
+	width:300px; 
+	height:440px;
+	background-color:#fff;
+	border:solid 1px #8aa5c2; 
+}
+
+#gadgetContainer {
+	width: 300px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+#gadgetContainer .hotspotTableWrapper {
+	width: 300px;
+}
+#gadgetContainer .title2 {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-color:#5885b5;
+	font-size:100%;
+	color:#ffffff;
+	font-weight:bold;
+}
+#gadgetContainer .title2 p {
+	margin: 0 0 0 0;
+	padding: 2px 8px 3px 10px;
+}
+#gadgetContainer .rowLine {
+	border-bottom:1px solid #8aa5c2;
+}
+#gadgetContainer .showme {
+	vertical-align:middle;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	width: 60%;
+}
+#gadgetContainer .showme label {
+	padding: 0 7px 0 10px;
+	margin: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+#gadgetContainer .navButtons {
+	vertical-align:middle;
+	text-align: right;
+	padding-right: 8px;
+	width: 40%;
+}
+
+/* 
+hotspotsList is the div table inside of the gadget, 
+and will be adjusted as needed.
+  */
+#hotspotsList {
+	border:solid 1px #8aa5c2; 
+	width:285px; 
+	height:360px;
+	text-align: left; 
+	overflow-y:scroll;
+	scrollbar-arrow-color:#3e8ac6; 
+	scrollbar-base-color:#ffffff;  
+	scrollbar-face-color:#e6e6e6;
+	scrollbar-darkshadow-color:#ffffff;
+	scrollbar-shadow-color:#ffffff;
+	scrollbar-track-color:#ffffff;
+	scrollbar-highlight-color:#ffffff;
+	scrollbar-3dlight-color:#ffffff;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-bottom: 0px;
+}
+
+#hotspotsTable {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 272px;
+}
+#hotspotsTable td {
+	vertical-align:top;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+#hotspotsTable td:hover {
+	background-color:#B7D8ED;
+	cursor:pointer;
+	height:30px;
+}
+#hotspotsTable td.location {
+	width: 200px;
+}
+#hotspotsTable p {
+	margin: 0px 0px 0px 0px;
+	padding: 2px 5px 2px 5px;
+	font-weight: normal;
+	font-size:100%;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	white-space: nowrap;
+}
+#hotspotsTable .hotspotNumber {
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+
+.HslResults_HeadingRow {
+	background-color: #edf2fb;				
+	color:#666;
+	font-weight: bold;
+	height:25px;
+	vertical-align:middle;
+	cursor:auto;
+}
+.HslResults_SelectedRow {
+	background-color:#B7D8ED;
+	cursor:hand;
+	height:30px;
+}
+.HslResults_Row  {
+	background-color:#dfe9f2;
+	cursor:hand;
+	height:30px;
+}
+.HslResults_Row:hover {
+	background-color:#B7D8ED;
+	cursor:pointer;
+	height:30px;
+}
+.contentTable {
+	border:1px solid #b3c0cc;
+	width:100%;	
+}
+
+/*Ad panel - placed for future use*/
+.adPanel {
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 10px; 
+	padding-left: 8px; 
+	width: 200px;
+	height:250px;
+}
+
+

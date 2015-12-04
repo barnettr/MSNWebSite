@@ -1,0 +1,126 @@
+/*
+the subheader images on the left
+ */
+.indexImages {
+	padding-left: 8px;
+	padding-top:0px;
+	width: 210px;
+	height: 225px;
+}
+/*
+the individual images on the left
+*/
+.indexImage {
+	border:1px solid #b3c0cc;
+}
+.croppedAssets {
+	padding-top:14px;
+}
+.contentHoldingCell {
+	padding-left: 8px; 
+	padding-top:0px; 
+	padding-right: 10px; 
+	width:100%;
+}
+/*
+center content table, holding Cell and center welcome table
+*/
+.contentTable {
+	border:1px solid #b3c0cc;
+	width:100%;	
+}
+.welcomeTable {
+	width:100%; 
+	/*background-color: #ebf3fb;*/
+	background-image: url(../images/misc/hn_steel.gif);
+	background-repeat:repeat-x; 
+	border-bottom: 1px solid #b3c0cc;
+}
+.headingMargin {
+	margin-top: 0px;
+}
+.helpCell {
+	padding-right:4px;
+}
+.width100 {
+	width: 100%;
+	height: 100%;
+}
+/* the searchbox is the table for the search selections */
+.searchbox {
+	padding-left: 6px;
+}
+/* 
+updating the class from the base.css 
+*/
+.Lable {
+	font-weight: bold;
+	color: #009900;
+}
+.leftAlignment {
+	padding-left: 10px;
+}
+.leftTopAlignment {
+    padding-left: 10px;
+	padding-top: 8px;
+}
+.ComboBox,.TextBox {
+}
+.heightRuler {
+	height: 50px;
+	padding-top: 8px;
+}
+.paddingMozilla {
+	padding-left: 8px;
+	padding-top: 8px; 
+}
+.BasicAdvancedSearch_Blue { 
+	font-size: 100%;  
+	color:#2059A5;
+	font-weight: normal;
+}
+.BasicAdvancedSearch_Gray { 
+	font-size: 100%; 
+	color:#666666;
+	font-weight: normal;
+}
+
+p.small {
+	font-size: 80%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+p {
+	padding: 10px 75px 0px 10px;
+}
+h1 {
+	padding-left: 8px;
+	margin-top: 0px;
+	/*background-color: #ebf3fb;*/
+	font-size:136%;
+}
+hr {
+	color:#d4e1e9;
+	height: 1px;
+}
+
+
+/*Ad panel - placed for future use*/
+.adPanel {
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 10px; 
+	padding-left: 8px; 
+	width: 200px;
+	height:250px;
+}
+
+/* ported from hsl.css */
+.Verdana_DarkGray_11_bold{font-family:Tahoma;font-size:11px; font-weight:bold; color:#333333; line-height:12pt;}
+
+.fancyButton{font-family:Tahoma;width:7em;font-size:95%;height:2em;display:inline-block;position:relative;cursor:pointer;text-align:center}
+.fancyButtonRest{background:#F1F1F1 url(../css/img/rest-gray-1px.png) center repeat-x;padding:1px 1px 1px 1px;border:1px solid #00156E;color:#00156E}
+.fancyButtonHover{background:#F1F1F1 url(../css/img/hover-blue-1px.png) center repeat-x;padding:0 0 0 0;border:1px solid #00156E;color:#00156E}
+.fancyButtonPressed{background:#B7D8ED url(../css/img/pressed-blue-1px.png) center repeat-x;padding:1px 1px 1px 1px;border:1px solid #00156E;color:#00156E}
+.fancyButtonDisabled{background-color:#F1F1F1;padding:0 0 0 0;border:1px solid #C7C7C7;color:#C7C7C7; cursor:default;}

@@ -1,0 +1,124 @@
+*{padding:0;margin:0}
+a{text-decoration:none;color:#3169B5}
+#a:visited{color:#666}
+a:hover{text-decoration:underline;color:#0088E4}
+a.rssHeadlineTitle:visited,a.rssHeadlineTitle.visited{color:#666}
+a.whatsNewLink:hover{color:#0088E4}
+body{font-family:Verdana,sans-serif;font-size:.7em;line-height:1.5em;margin:0}
+xml{display:none}
+
+.TextBox{border:solid 1px #7695B2; height:19px; vertical-align:middle; background-image:url(../css/img/TextBack.gif)}
+.ComboBox{border:solid 1px #7695B2; background-image:url(../css/img/TextBack.gif)}
+.ListBox{border:solid 1px #7695B2; background-image:url(../css/img/TextBack.gif)}
+.CheckedListBox{border:solid 1px #7695B2; border-width:1px;height:80px;width:195px; overflow-y:scroll;text-align:left;}
+.WideCheckedListBox{border:solid 1px #7695B2; border-width:1px;height:80px;width:240px; overflow-y:scroll;text-align:left;}
+.Label{font-family:Tahoma;font-size:11px; font-weight:bold;}
+.hyperlink{text-decoration:underline;color:#3169B5}
+
+.Verdana_LightGray_9_norm{font-family:Tahoma;font-size:9px; font-weight:normal; color:#666666;}
+.Verdana_Gray_10_norm{font-family:Tahoma;font-size:10px; font-weight:normal; color:#333333;}
+.Verdana_DarkGray_11_norm{font-family:Tahoma;font-size:11px; font-weight:normal; color:#333333;}
+
+.Verdana_DarkGray_11_bold{font-family:Tahoma;font-size:11px; font-weight:bold; color:#333333;}
+
+.Verdana_Blue_11_norm{font-family:Tahoma;font-size:11px; font-weight:normal; color:#2059A5;}
+.Verdana_Blue_12_norm{font-family:Tahoma;font-size:12px; font-weight:normal; color:#2059A5;}
+
+.Verdana_Black_10_norm{font-family:Tahoma;font-size:10px; font-weight:normal;}
+.Verdana_Black_11_norm{font-family:Tahoma;font-size:11px; font-weight:normal;}
+
+.Verdana_White_12_bold{font-family:Tahoma;font-size:12px; font-weight:bold; color:#FFFFFF;}
+
+.Segoe_DarkGray_11_semi{font-family:Segoe; font-size:11px; font-weight:bolder; color:#333333;}
+.Segoe_DarkGray_11_norm{font-family:Segoe; font-size:11px; font-weight:normal; color:#333333;}
+
+.Segoe_DarkGray_12_semi{font-family:Segoe; font-size:12px; font-weight:bolder; color:#333333;}
+.Segoe_DarkGray_12_norm{font-family:Segoe; font-size:12px; font-weight:normal; color:#333333;}
+
+
+.Segoe_Gray_12_norm{font-family:Segoe; font-size:12px; font-weight:normal; color:#666666;}
+.Segoe_Gray_14_norm{font-family:Segoe; font-size:14px; font-weight:normal; color:#666666;}
+.Segoe_Gray_14_semi{font-family:Segoe; font-size:14px; font-weight:bolder; color:#666666;}
+
+.Segoe_Blue_10_norm{font-family:Segoe; font-size:10px; font-weight:normal; color:#2059A5;}
+.Segoe_Blue_11_norm{font-family:Segoe; font-size:11px; font-weight:normal; color:#2059A5;}
+.Segoe_Blue_12_norm{font-family:Segoe; font-size:12px; font-weight:normal; color:#2059A5;}
+
+.Segoe_Blue_10_bold{font-family:Segoe; font-size:10px; font-weight:bold; color:#2059A5;}
+.Segoe_Blue_12_bold{font-family:Segoe; font-size:12px; font-weight:bold; color:#2059A5;}
+
+
+.Segoe_Black_10_norm{font-family:Segoe; font-size:10px; font-weight:normal;}
+
+
+
+.LeftAlign{text-align:left;}
+.MiddleAlign{vertical-align:middle;}
+.Align{vertical-align:middle; text-align:center;}
+
+Width42px{width:42px;}
+Width70px{width:70px;}
+Width58px{width:58px;}
+Width102px{width:102px;}
+
+.fancyButton{font-family:Tahoma;width:7em;font-size:95%;height:2em;display:inline-block;position:relative;cursor:pointer;text-align:center}
+.fancyButtonRest{background:#F1F1F1 url(../css/img/rest-gray-1px.png) center repeat-x;padding:1px 1px 1px 1px;border:1px solid #00156E;color:#00156E}
+.fancyButtonHover{background:#F1F1F1 url(../css/img/hover-blue-1px.png) center repeat-x;padding:0 0 0 0;border:1px solid #00156E;color:#00156E}
+.fancyButtonPressed{background:#B7D8ED url(../css/img/pressed-blue-1px.png) center repeat-x;padding:1px 1px 1px 1px;border:1px solid #00156E;color:#00156E}
+.fancyButtonDisabled{background-color:#F1F1F1;padding:0 0 0 0;border:1px solid #C7C7C7;color:#C7C7C7; cursor:default;}
+
+.gradientBlue   {
+                filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#FFFFFF', startColorstr='#E4EDF3', gradientType='0');
+                }
+
+.HslResults_Table    
+                {
+                background-color:#FFFFFF;
+                border:1px;
+                border-color:#FF0000;
+                }
+
+.HslResults_HeadingRow    
+                {
+                border:solid 1px #C7C7C7;
+                background-color:#E9E9E9;					
+                font-family:Tahoma;
+                font-weight:normal; 
+                color:#333333;
+                height:19px;
+                vertical-align:middle;
+                cursor:hand;
+                }
+
+.HslResults_HeadingRow_NoClick  
+                {
+                border:solid 1px #C7C7C7;
+                background-color:#E9E9E9;					
+                font-family:Tahoma;
+                font-weight:normal; 
+                color:#333333;
+                height:19px;
+                vertical-align:middle;
+                }
+
+.HslResults_SelectedRow    
+                {
+                background-color:#B7D8ED;
+                cursor:hand;
+                height:30px;
+                }
+
+.HslResults_Row {
+                background-color:#E4EDF3;
+                cursor:hand;
+                height:30px;
+                }
+
+.MapListBoxRow  {
+                background-color:#E4EDF3;
+                height:30px;
+                }
+                
+.BluePanel     {
+                background-color:#E4EDF3;
+               }

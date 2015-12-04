@@ -1,0 +1,379 @@
+body
+{
+	padding-left:8px;
+	padding-right:8px;
+	line-height:normal;
+}
+
+Table
+{
+	padding: 0px;
+	border-style:none;
+}
+.Image
+{
+    width : 0%;
+    height:0%;
+    display:none;
+}
+/*----------------------------for admin portal ---------------------------*/
+.customtag
+{
+	text-decoration: none;
+	color: #003399;
+    cursor: pointer;
+}
+hr
+{
+	height: 1px;
+	width: 100%;
+	color: #AACBEE;
+}
+/*--------------- admin end */
+.headerCss
+{
+	text-align:center;
+	width:970px;
+}
+.connectVote
+{
+}
+.connectItem
+{
+}
+.ContainerBorder
+{
+	padding:8px;
+}
+.bannerContainer
+{
+	background-image: url(/images/banner.jpg);
+	background-repeat: no-repeat;
+	width:980px;
+	height:103px;
+}
+.bannerText
+{
+    height:85px;
+	margin-left: 250px;
+	margin-top:15px;
+	overflow:hidden;
+}
+.BlockBorder
+{
+	border:#cccccc 1px solid;
+}
+.featuredBetas
+{
+	width:432px;
+}
+.featuredBetaContent
+{
+	overflow:hidden;
+	height:12em;
+	margin-left:5px;
+}
+.featuredBetaTitle, .featuredBetaTitle:visited
+{
+    text-align: left;
+    color:#777777;
+	font-weight:bold;
+	font-size:140%;
+}
+.blockTitle
+{
+	color: #2059A5;
+	margin-bottom: 20px;
+	padding-top: 4px;
+}
+.FeaturedLinksCol
+{
+	background-color: #58A8ED;
+	text-align:right;
+	margin-bottom:20px;
+	width:100%;
+	padding-right:8px;
+}
+.FeaturedLinkRight,.FeaturedLinkLeft,.FeaturedLinkRight:hover,.FeaturedLinkLeft:hover
+{
+	color:White;
+}
+.FeaturedLinkRight
+{
+	margin-left:10px;
+}
+.liveBetasTitle
+{
+}
+.liveBetasIcon
+{
+	border:none;
+	padding-right:16px;
+	padding-top:16px;
+	width:48px;
+	height:48px;
+	float:left;
+}
+.liveBetasLinks
+{
+	float:left;
+	padding-top:16px;
+}
+.myBetasCell
+{
+	width:180px;
+}
+.showAllLink
+{
+}
+.buttonL, .buttonR
+{
+    background:url(/images/button.bg.gif) repeat 50%;
+    border:1px solid #519BCC;
+    color:#000262;
+    height:1.78em;
+}
+
+/* //////////////from hotmail///// */
+.EditMessageAutoCompleteInput{height:1.2em;overflow-y:hidden;}
+.ContactPickerCommand{}
+.autoCompleteItemSelected{ color:white;background-color: #58A8ED;}
+.autoCompleteItemMatchMarkup{ font-weight:bold;}
+.AutoCompleteList{cursor:hand;background-color: #ffffff;}
+.ContactPickerHeader, .AutoCompleteList.ContactPickerActive
+{
+    border:1px solid #666699;
+    FILTER: progid:DXImageTransform.Microsoft.Shadow(Color="black", Direction=135,Strength=3);
+}
+.addBook{ border:none;}
+.DisplayBlock {display:block;}
+.DisplayNone{visibility:none;}
+DIV.Label {float:left;text-align:left;padding-right:0.45em;}
+DIV.Values {}
+.cRow {padding-bottom:0.18em;height:1.73em;}
+.cRow.ToRow {float:left;}
+.ContactPickerHeader {position:absolute;top:0px;left:0px;}
+.ContactPickerHeader DIV {padding:.27em;}
+.ContactPickerHeader DIV IMG {float:right;}
+
+/* enhanced preview */
+.tip
+{
+	position:absolute;
+	border: #888888 1px solid;
+	margin:0.2em;
+	z-index: 10001;
+	padding:4px;
+	background-color:White;
+}
+.tipTitle
+{
+	padding:4px;
+	background-color:White;
+}
+.tipInfo
+{
+	visibility:hidden;
+	position:absolute;
+}
+.tipBody
+{
+	width: 15em;
+	height: 35.6em;
+	padding: 4px;
+	overflow: auto;
+	background-color:White;
+}
+.tipLinks
+{
+	margin-top:4px;
+	padding:4px;
+	background-color : #E4EDF3;
+}
+.tipLine
+{
+    height:1px;
+    color:  #E4EDF3;
+    padding : 5px;
+}
+.tipArrowLeft
+{
+	position:absolute;
+	width:18px;
+	height:34px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/tiparrowleft.png',sizingMethod='crop');
+}
+.Mozilla .tipArrowLeft, .Opera .tipArrowLeft
+{
+	background-image:url(/images/tiparrowleft.png);
+	filter:none;
+}
+.tipArrowRight
+{
+	position:absolute;
+	width:19px;
+	height:34px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/tiparrowright.png',sizingMethod='crop');
+}
+.Mozilla .tipArrowRight, .Opera .tipArrowRight
+{
+	background-image:url(/images/tiparrowright.png);
+	filter:none;
+}
+.dropShadow
+{
+	position:absolute;
+	margin-top:4px;
+	margin-left:4px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/shadow.png',sizingMethod='scale');
+}
+.Mozilla .dropShadow, .Opera .dropShadow
+{
+	background-image:url(/images/shadow.png);
+	filter:none;
+}
+/*---------------   RTE      -----------------------*/
+.beRTEDL
+{
+	visibility:hidden;
+}
+.MSN_EDITCONTAINER a
+{
+	text-decoration:underline;
+}
+.WaitList
+{
+    width:100%
+}
+tr.WaitListLine
+{
+    height:40px;
+}
+.WaitListBox
+{
+	width:  263px;
+	border:1px;
+	border-color:#7F9DB9;
+	border-style: solid;
+	height:20px;
+}
+.InviteBox
+{
+	border:1px;
+	border-color:#CCCCCC;
+	border-style: solid;
+}
+.Spacer
+{
+	height: 16px;
+	width:  100%;
+}
+.Spacer12
+{
+	line-height:1px;
+	height: 12px;
+	width:  100%;
+}
+.Spacer8
+{
+	line-height:1px;
+	height: 8px;
+	width:  100%;
+}
+.Spacer5
+{
+	line-height:1px;
+	height: 5px;
+	width:  100%;
+}
+.TOU
+{
+	border: #cccccc 1px solid;
+	margin-bottom: 16px;
+}
+.ErrpageTable
+{
+	border: #cccccc 1px solid;
+	padding-right: 67px;
+	margin-top: 32px; /* 48-16=32 */
+	padding-left: 67px;
+	padding-bottom: 24px;
+	color: #333333;
+	padding-top: 24px;
+	background-color: #ffffcc;
+}
+.ContentTable
+{
+	border: #cccccc 1px solid;
+	padding-right: 16px;
+	padding-left: 16px;
+	width:506px;
+}
+.CongTable
+{
+	border: #cccccc 1px solid;
+	padding:20px;
+	margin-bottom:20px;
+}
+.RightBlockLine
+{
+    height:1px;
+    color:#E4EDF4;
+    border-style:solid;
+}
+.TextBlock
+{
+	text-align: left;
+	color: #333333;
+}
+.TextBlockBold
+{
+	text-align: left;
+	color: #333333;
+	font-weight: bold;
+}
+.TextBlockTitle
+{
+	text-align: left;
+	font-size:160%;
+	color: #003399;
+}
+.TextBlockLink
+{
+	text-align: left;
+	color: #003399;
+}
+.TextBlockHead
+{
+	text-align: left;
+	color: #333333;
+	font-weight: bold;
+}
+.Supplemental
+{
+    color: #003399;
+}
+.EmailSentList
+{
+	position:relative;
+	vertical-align:middle;
+}
+/* input email addrss box */
+.emailRow
+{
+	padding-bottom: 8px;
+}
+.InvalidEmailStar
+{position: relative;top: 2px;}
+#EmailTable tr{display:block}
+
+/*  efp */
+#header .SearchSection {display:none;}
+.LeftNav{}
+.LeftNav .List .On{margin:0px;padding:8px 8px 5px 16px;background-color:#D2EAF6;}
+.LeftNav .List{border:none;margin:0px;padding:0px;list-style:none;_height:1px;}
+.LeftNav .List li{margin:0px;padding:0px;}
+.LeftNav .List li a{margin:0px;padding:8px 8px 5px 16px;display:block;color:#444444;text-decoration:none;}
+html > body .LeftNav .List li a{width:auto;}
+.LeftNav .List li a:visited{color:#444444;}
+.LeftNav .List li a:hover{background-color:#EDF2FB;text-decoration:none;color:#444444;}

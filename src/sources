@@ -1,0 +1,25 @@
+!INCLUDE $(INETROOT)\build\paths.all
+!INCLUDE $(INETROOT)\build\sources.all
+
+MAJORCOMP       = MS.Msn.InternetAccess
+MINORCOMP       = HSLMSNWebSite
+
+TARGETNAME      = HSLMSNWebSite
+TARGETTYPE      = NOTARGET
+
+SOURCES=
+
+SYNCHRONIZE_BLOCK = 1
+SYNCHRONIZE_DRAIN = 1
+
+URT_VER         = 1.2
+NTTARGETFILES   = CopyLibsPreBuild \
+                  aspnet2 \
+                  CopyLibsPostBuild \
+
+ASPNET_USE_VIRTUAL_PATH  = 1
+ASPNET_SOURCE            = /
+ASPNET_TARGET            = $(INETROOT)\public\distrib\%BUILDTYPE%\src\hsl_v1\web\HSLMSNWebSite
+ASPNET_PHYSICAL          = website
+ASPNET_PRECOMPILE        = 1
+ASPNET_OPTIONS           = -f -fixednames

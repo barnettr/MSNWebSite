@@ -1,0 +1,139 @@
+#infocard {
+	position:absolute; 
+	border:solid 1px #aacbee; 
+	left:500px; 
+	top:140px; 
+	width:290px;
+	height: 250px; 
+	padding: 0px 3px 0px 3px;
+	background-color: #fff; 
+}
+#infocard table {
+	margin: 0;
+	padding: 0px 0px 0px 10px;
+	position:absolute;  
+	left:500px; 
+	top:120px; 
+	width:290px;
+	height:250px;
+}
+#infocard td {
+	vertical-align: top;
+}
+#infocard p {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 6px;
+}
+.infocardTitle {
+	color: #fff;
+}
+.title1 {
+	margin: 0 0 0 0;
+	padding: 4px 0px 0px 0px;
+	background-color:#ffffff;
+	font-size:100%;
+	color:#424443;
+	font-weight:normal;
+	background-image: url(../images/misc/cb_gradient_300x6px.gif);
+	background-repeat:repeat-x;
+}
+.leftAlignment {
+	padding-left: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background-color: #ebf3fb;
+	border-bottom:1px solid #aacbee;
+	background-image: url(../images/misc/cb_gradient_300x1px.gif);
+	background-repeat:repeat-y;
+}
+.rightAlignment {
+	padding-right: 4px;
+}
+.leftLocationPhotoAlignment {
+	padding-left: 8px;
+	padding-top: 2px;
+}
+.infoCardCat {
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.textCell {
+	padding-top: 0px;
+	padding-left:4px; 
+	padding-right:4px;
+}
+.infoCardText {
+	font-weight: normal;
+	font-size:100%;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+}
+.leftAmenityAlignment {
+	padding-left: 8px;
+	padding-top: 8px;
+	padding-right: 1px;
+}
+.listAlignment {
+	padding-left: 2px;
+	padding-top: 8px;
+	padding-bottom: 2px;
+	padding-right: 0px;
+}
+.providerList {
+	padding-left:6px; 
+	padding-bottom:2px;
+	padding-top: 4px;
+}
+.providerAlignment {
+	padding: 0px 0px 0px 6px;
+	margin: 0px 0px 0px 0px;
+}
+.providerImage {
+	padding: 0px 2px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.amenityRightAsset {
+	padding-right: 4px;
+}
+.amenity2RightAsset {
+	padding-right: 12px;
+}
+.amenityCenterAsset {
+	padding-left: 8px;
+}
+
+#infocardsList {
+	border:solid 1px #aacbee; 
+	width:290px; 
+	height:100px; 
+	overflow-y:scroll;
+	scrollbar-arrow-color:#3e8ac6; 
+	scrollbar-base-color:#ffffff;  
+	scrollbar-face-color:#e6e6e6;
+	scrollbar-darkshadow-color:#ffffff;
+	scrollbar-shadow-color:#ffffff;
+	scrollbar-track-color:#ffffff;
+	text-align:left;
+	margin-left: 0px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+}
+#cardProviders {
+	width: 270px;
+}
+
+.BluePanel {
+	/*background-color: #dae5ef;*/
+	background-color: #eef4fa;
+}
+.lowerText {
+	color:#07519a !important;
+}
+.footerAlignment {
+	padding-left: 9px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 4px;
+	border-top:1px solid #aacbee;
+}

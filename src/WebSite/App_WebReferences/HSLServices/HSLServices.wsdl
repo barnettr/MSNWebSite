@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="MS.Msn.InternetAccess.HSLServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="MS.Msn.InternetAccess.HSLServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="MS.Msn.InternetAccess.HSLServices">
+      <s:element name="GetAllRegionsSyncInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllRegionsSyncInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllRegionsSyncInfoResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TableDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DTOs" type="tns:ArrayOfBaseDTO" />
+              <s:element minOccurs="1" maxOccurs="1" name="AvailableRows" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDTO" />
+      <s:complexType name="CompositeSyncInfoDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Version" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RegionId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CountryId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AccessPointCount" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="HotspotLocationCount" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PaymentPlanCount" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SearchResultDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Hotspots" type="tns:TableDTO" />
+              <s:element minOccurs="0" maxOccurs="1" name="LatLong" type="tns:LatitudeLongitudeDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LatitudeLongitudeDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:double" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GenericDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FieldsData" type="tns:ArrayOfAnyType" />
+              <s:element minOccurs="0" maxOccurs="1" name="FieldNames" type="tns:ArrayOfAnyType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CountrySyncInfoDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Regions" type="tns:TableDTO" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CountryId" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RegionSyncInfoDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RegionId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CountryId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="AccessPoints" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="HotspotLocations" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PaymentPlans" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CategoryDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CategoryId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CountryRegionVersionDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RemoteVersion" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="CountryId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="RegionId" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="HSLCountsDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TotalLocations" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TotalCountries" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceProviderDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ProviderName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RegionServiceProviderDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ServiceProviderDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RegionCode" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CountryRegionServiceProviderDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RegionServiceProviderDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RegionDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RegionCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CountryRegionDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RegionDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CountryDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccessPointDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceProvider" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ssid" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Security" type="tns:SecurityScheme" />
+              <s:element minOccurs="0" maxOccurs="1" name="EncryptionKey" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cost" type="tns:CostScheme" />
+              <s:element minOccurs="0" maxOccurs="1" name="MacAddress" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="SecurityScheme">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="None" />
+          <s:enumeration value="Secured" />
+          <s:enumeration value="LEAP" />
+          <s:enumeration value="WEP" />
+          <s:enumeration value="WPA" />
+          <s:enumeration value="Both" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CostScheme">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Free" />
+          <s:enumeration value="Pay" />
+          <s:enumeration value="Both" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="AmenityDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Flag" nillable="true" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="HotspotDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryAbbr" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionAbbr" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AddrStreet" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Security" type="tns:SecurityScheme" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cost" type="tns:CostScheme" />
+              <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AmenitiesComments" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseableAreasComments" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amenities" type="tns:ArrayOfAmenityDTO" />
+              <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="Distance" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccessPoints" type="tns:ArrayOfAccessPointDTO" />
+              <s:element minOccurs="0" maxOccurs="1" name="LocationPhotoUrl" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfAmenityDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AmenityDTO" nillable="true" type="tns:AmenityDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccessPointDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccessPointDTO" nillable="true" type="tns:AccessPointDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SearchCriteriaDTO">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDTO">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AreaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceProviders" type="tns:ArrayOfString" />
+              <s:element minOccurs="1" maxOccurs="1" name="Proximity" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfString" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cost" type="tns:CostScheme" />
+              <s:element minOccurs="1" maxOccurs="1" name="StartAtRow" type="s:unsignedInt" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxRows" type="s:unsignedInt" />
+              <s:element minOccurs="1" maxOccurs="1" name="FetchRowsCount" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Sort" type="tns:SortOrder" />
+              <s:element minOccurs="1" maxOccurs="1" name="SortDir" type="tns:SortDirection" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SortOrder">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Distance" />
+          <s:enumeration value="Name" />
+          <s:enumeration value="Cost" />
+          <s:enumeration value="Security" />
+          <s:enumeration value="Address" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SortDirection">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ascending" />
+          <s:enumeration value="Descending" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfBaseDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BaseDTO" nillable="true" type="tns:BaseDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRegionsIncrementalTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="versionInfo" type="tns:ArrayOfCountryRegionVersionDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="batchSizes" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCountryRegionVersionDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CountryRegionVersionDTO" nillable="true" type="tns:CountryRegionVersionDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRegionsIncrementalTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionsIncrementalTransactionsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="criteria" type="tns:SearchCriteriaDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResult" type="tns:SearchResultDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountries">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCountriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountriesResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllRegions">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllRegionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllRegionsResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryRegions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryRegionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryRegionsResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategories">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoriesResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllServiceProviders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllServiceProvidersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllServiceProvidersResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllServiceProvidersDistinct">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllServiceProvidersDistinctResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllServiceProvidersDistinctResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryServiceProviders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryServiceProvidersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryServiceProvidersResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryServiceProvidersDistinct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryServiceProvidersDistinctResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryServiceProvidersDistinctResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceProviders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceProvidersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceProvidersResult" type="tns:TableDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCounts">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountsResult" type="tns:HSLCountsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllRegionsSyncInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllRegionsSyncInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsSyncInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllRegionsSyncInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionsIncrementalTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionsIncrementalTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionsIncrementalTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionsIncrementalTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllRegions" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryRegionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryRegions" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryRegionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllServiceProvidersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllServiceProviders" />
+  </wsdl:message>
+  <wsdl:message name="GetAllServiceProvidersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllServiceProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllServiceProvidersDistinctSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllServiceProvidersDistinct" />
+  </wsdl:message>
+  <wsdl:message name="GetAllServiceProvidersDistinctSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllServiceProvidersDistinctResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryServiceProvidersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryServiceProviders" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryServiceProvidersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryServiceProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryServiceProvidersDistinctSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryServiceProvidersDistinct" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryServiceProvidersDistinctSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryServiceProvidersDistinctResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceProvidersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceProviders" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceProvidersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCounts" />
+  </wsdl:message>
+  <wsdl:message name="GetCountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HSLServicesSoap">
+    <wsdl:operation name="GetAllRegionsSyncInfo">
+      <wsdl:input message="tns:GetAllRegionsSyncInfoSoapIn" />
+      <wsdl:output message="tns:GetAllRegionsSyncInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsIncrementalTransactions">
+      <wsdl:input message="tns:GetRegionsIncrementalTransactionsSoapIn" />
+      <wsdl:output message="tns:GetRegionsIncrementalTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesSoapIn" />
+      <wsdl:output message="tns:GetCountriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <wsdl:input message="tns:GetAllRegionsSoapIn" />
+      <wsdl:output message="tns:GetAllRegionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryRegions">
+      <wsdl:input message="tns:GetCountryRegionsSoapIn" />
+      <wsdl:output message="tns:GetCountryRegionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesSoapIn" />
+      <wsdl:output message="tns:GetCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServiceProviders">
+      <wsdl:input message="tns:GetAllServiceProvidersSoapIn" />
+      <wsdl:output message="tns:GetAllServiceProvidersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServiceProvidersDistinct">
+      <wsdl:input message="tns:GetAllServiceProvidersDistinctSoapIn" />
+      <wsdl:output message="tns:GetAllServiceProvidersDistinctSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryServiceProviders">
+      <wsdl:input message="tns:GetCountryServiceProvidersSoapIn" />
+      <wsdl:output message="tns:GetCountryServiceProvidersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryServiceProvidersDistinct">
+      <wsdl:input message="tns:GetCountryServiceProvidersDistinctSoapIn" />
+      <wsdl:output message="tns:GetCountryServiceProvidersDistinctSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceProviders">
+      <wsdl:input message="tns:GetServiceProvidersSoapIn" />
+      <wsdl:output message="tns:GetServiceProvidersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCounts">
+      <wsdl:input message="tns:GetCountsSoapIn" />
+      <wsdl:output message="tns:GetCountsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HSLServicesSoap" type="tns:HSLServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllRegionsSyncInfo">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllRegionsSyncInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsIncrementalTransactions">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetRegionsIncrementalTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryRegions">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountryRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServiceProviders">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllServiceProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServiceProvidersDistinct">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllServiceProvidersDistinct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryServiceProviders">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountryServiceProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryServiceProvidersDistinct">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountryServiceProvidersDistinct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceProviders">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetServiceProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounts">
+      <soap:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HSLServicesSoap12" type="tns:HSLServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllRegionsSyncInfo">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllRegionsSyncInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionsIncrementalTransactions">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetRegionsIncrementalTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/Search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllRegions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryRegions">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountryRegions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServiceProviders">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllServiceProviders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllServiceProvidersDistinct">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetAllServiceProvidersDistinct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryServiceProviders">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountryServiceProviders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryServiceProvidersDistinct">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCountryServiceProvidersDistinct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceProviders">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetServiceProviders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCounts">
+      <soap12:operation soapAction="MS.Msn.InternetAccess.HSLServices/GetCounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HSLServices">
+    <wsdl:port name="HSLServicesSoap" binding="tns:HSLServicesSoap">
+      <soap:address location="http://localhost:1884/HSLServicesV1/HSLServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HSLServicesSoap12" binding="tns:HSLServicesSoap12">
+      <soap12:address location="http://localhost:1884/HSLServicesV1/HSLServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

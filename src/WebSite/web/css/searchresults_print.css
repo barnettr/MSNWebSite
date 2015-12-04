@@ -1,0 +1,68 @@
+html,body {height:100%;}
+
+#wrappingTable {
+	padding: 0px 10px 0px 10px;
+}
+#wrappingTable .headerTable {
+	background-color: #ebf3fb;
+	border:1px solid #aacbee;
+}
+#wrappingTable .rowLine {
+	border-left:1px solid #aacbee;
+	border-right:1px solid #aacbee;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#wrappingTable .results {
+	border-left:1px solid #aacbee;
+	border-right:1px solid #aacbee;
+	border-bottom:1px solid #aacbee;
+}
+#wrappingTable .HslResults_HeadingRow {
+	background-color: #edf2fb;
+	color:#666666;
+	font-weight: bold;
+	height: 25px;
+	vertical-align: middle;
+	cursor:pointer;
+}
+#wrappingTable .HslResults_Row  {
+	background-color:#E4EDF3;
+	cursor:pointer;
+	height:60px;
+}
+#wrappingTable .HslResults_SelectedRow {
+	background-color:#B7D8ED;
+	cursor:pointer;
+	height:60px;
+}
+/*
+we've added 6px to 
+add some space to the column.
+the line_height_standard is from the base.css
+*/
+.line_height_standard {
+	padding-left: 6px;
+}
+
+p {
+	padding: 5px 0 5px 0;
+	margin: 0px 0px 0px 0px;
+}
+.contentTable {
+	border:1px solid #aacbee;
+	width:100%;	
+}
+
+/*Ad panel - placed for future use*/
+.adPanel {
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 10px; 
+	padding-left: 8px; 
+	width: 200px;
+	height:250px;
+}
+
+/* ported from hsl.css */
+.Verdana_DarkGray_11_bold{font-family:Tahoma;font-size:11px; font-weight:bold; color:#333333; line-height:12pt;}

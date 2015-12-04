@@ -1,0 +1,81 @@
+body{margin:0px 0px 0px 0px;height:100%;color:#333333;background-color:#FFFFFF;font:normal 0.7em/130% "Tahoma", Verdana, Tahoma, Arial, sans-serif;}
+p{margin:0px 0px 1.2em;}
+div{margin:0px;padding:0px;}
+label{color:#333333;font-weight:bold;}
+
+h1, h2, h3, h4, h5{margin:0px;color:#666666;line-height:145%;font-weight:bold;}
+h1{margin:8px 0px 4px;font-size:146%;}
+h2{margin:8px 0px 4px;font-size:132%;}
+h3{margin:4px 0px;font-size:125%;}
+h4{margin:4px 0px;font-size:110%;}
+h5{margin:4px 0px;font-size:100%;}
+a{color:#07519a;text-decoration:none;}
+a:visited{color:#07519a;text-decoration:none;}
+a:hover, a.context_link:hover, a.link_light:hover{color:#090;text-decoration:underline;}
+
+ul{margin:0px 0px 20px 1em;padding:0px 0px 0px 1em;list-style-type:disc;}
+li{margin:0px 0px 3px;}
+ul.no_bullets{list-style-type:none;}
+ul.list_space_large li{margin-bottom:8px;}
+html,body{height:100%;width: 100%;border:none;}
+html>body {
+    height: auto; /*this undoes the IE hack, hiding it from IE using the child selector*/
+}
+
+.ComboBox,.ListBox,.TextBox {border:solid 1px #7695B2; background-image: url(../images/misc/TextBack.gif);}
+.CheckedListBox{border:solid 1px #7695B2; border-width:1px;height:80px;width:196px; overflow-y:scroll;text-align:left;}
+.WideCheckedListBox{border:solid 1px #7695B2; border-width:1px;height:80px;width:247px; overflow-y:scroll;text-align:left;}
+
+.container_border{border:1px solid #afd3eb;}
+.container_background{background-color:#FFFFFF;}
+.container{border:1px solid #afd3eb;background-color:#FFFFFF;}
+.container title{background-color:#E4EDF2;}
+
+.title{border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#fff;padding:8px 5px 8px 8px;background-color:#EFEFEF;font-size:100%;color:#777777;font-weight:bold;}
+
+.textHighlight {
+	color: #e85f17;
+}
+.field{border:1px solid #888;padding:0.3em;font-size:100%;color:#777777;background-color:#FFFFFF;}
+.search_field{border:1px solid #888;padding:0.3em;font-size:110%;color:#C7C7C7;background-color:#FFFFFF;font-style:italic;font-weight:bold;}
+
+.footer{color:#777777;}
+
+.breadcrumb{padding:5px;}
+.searchnav{padding-left:8px;padding-right:8px;font-size:110%;vertical-align:middle;}
+
+.line_height_tight{line-height:105%;}
+.line_height_median{line-height:115%;}
+.line_height_standard{line-height:130%;}
+.line_height_loose{line-height:145%;}
+.line_height_xloose{line-height:170%;}
+
+.border_1{border:1px solid #afd3eb;}
+
+/* button specific */
+form { vertical-align:middle; }
+button {
+	margin-left:5px; 
+	width:7em;
+	/*background: #f4f4f4 url(../images/locations/HigButton_Rest.gif) center repeat-x ;*/
+	/*border:.1em solid #adb2b5;*/ 
+	color:#333333;
+	font-size: 95%;
+	height:2em;
+	vertical-align:middle; 
+}
+button.rest     { } /* This is the Default */
+/*button.pressed  { background-image:url(../images/locations/HigButton_Pressed.gif);  background-color:#B7D8ED; }
+button.default  { background-image:url(../images/locations/HigButton_Default.gif); }
+button:hover    { background-image:url(../images/locations/HigButton_Hot.gif); }
+button:focus    { background-image:url(../images/locations/HigButton_Hot.gif); }  border set below */
+
+/* button.disabled is the same for all, and thus is last in this list */
+/*button.disabled { background-image: none; border-color: #adb2b5; background-color:#f4f4f4;  color:#aaaaaa;}
+button.focus    {  background-color:#00156E; }*/
+.footerDiv {
+	padding: 0px 10px 0px 10px;
+	margin: 0px 0px 0px 0px;
+}
+
+

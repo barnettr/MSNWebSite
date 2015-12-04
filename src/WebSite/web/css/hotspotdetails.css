@@ -1,0 +1,122 @@
+#detailTable {
+	width: 100%;
+	height: auto;
+}
+
+#wrappingCell {
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#wrappingCell .headerTable {
+	background-color: #e6eaef;
+	border:1px solid #b3c0cc;
+	border-bottom: none;
+}
+#lowerCell {
+	padding: 0px 0px 0px 0px;
+	margin: 0 0 0 0;
+	width: 100%;
+	height:100%;
+}
+#lowerCell .mapImage {
+	border:1px solid #b3c0cc;
+	margin-top: 0px;	
+}
+/* 
+myMap is div holding the map image 
+*/
+#myMap {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+
+a {color:#00649f;text-decoration: none; }
+h5 {margin-bottom: 0;}
+table {margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;}
+td {vertical-align: top;}
+p {margin: 0 0 0 0;padding: 0 0 0 0;}
+html,body {height:100%;}
+
+
+
+
+/*
+location is the physical street address for the location
+ */
+.location p,.listSearch {
+	vertical-align: middle;
+	padding-left: 5px;
+	color:#0265a8;
+}
+/* 
+locationTitle is the Location and the number of providers in that location 
+ */
+.locationTitle p {
+	padding-bottom: 10px;
+}
+/*
+amenities are the pictures for the amenities for each location - this assumes the images are of the same size in width and height
+*/
+.amenities {
+	padding: 0px 0 10px 0;
+}
+.amenities img {
+	padding: 0px;
+	margin: 0;
+}
+/*
+data is the bottom paragraph with data provided by ....
+ */
+.data {
+	position:relative; 
+	font-size: 90%;
+	bottom: 0;
+	width:100%;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+.location {
+	width: 200px;
+}
+
+
+.footerCell {
+	padding: 0px 10px 0px 10px;
+}
+.HslResults_HeadingRow {
+	background-color: #e6eaef;				
+	color:#0265a8;
+	font-weight: normal;
+	height:25px;
+	vertical-align:middle;
+	cursor:auto;
+}
+
+.headerBackground {
+	background-image: url(../comps/HeaderGradientImage.gif);
+	background-repeat:repeat-x;
+}
+
+.cellDivider {
+	padding-top: 40px;
+}
+#email {
+	color: #07519a;
+}
+.contentTable {
+	border:1px solid #b3c0cc;
+	width:100%;	
+}
+
+/*Ad panel - placed for future use*/
+.adPanel {
+	margin-left: 0px; 
+	padding-top: 0px; 
+	padding-right: 10px; 
+	padding-left: 8px; 
+	width: 200px;
+	height:250px;
+}

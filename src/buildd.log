@@ -1,0 +1,61 @@
+Executing prebuild scripts  ********************
+Performing prebuild steps...
+1>'c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\buildpre.cmd -c'
+1>
+1>C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src>call c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\prebuild.cmd 
+1>
+1>C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src>nmake /nologo /f c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\prebuild.mak prebuild 
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\versions.h, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\versions.h, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\versionsmk.inc, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\versionsmk.inc, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\ndp10.versions.h, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\ndp10.versions.h, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\ndp10.versionsmk.inc, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\ndp10.versionsmk.inc, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\ndp11.versions.h, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\ndp11.versions.h, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\ndp11.versionsmk.inc, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\ndp11.versionsmk.inc, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\ndp20.versions.h, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\ndp20.versions.h, Current, 2007/01/15-12:53:59
+1>PUBLISHLOG: C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src, c:\msnnonboundary01-7776_hsl_v1\objd\i386\ndp20.versionsmk.inc, c:\msnnonboundary01-7776_hsl_v1\public\internal\Base\lib\i386\ndp20.versionsmk.inc, Current, 2007/01/15-12:53:59
+1>*** COMPUTING ASMMETA BUILD RULES ***
+1>	cscript //nologo //job:genPrebuildRules c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\prebuild.wsf /out:C:\DOCUME~1\a-rob\LOCALS~1\Temp\prebuild9961.inc; c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\prebuild.xml & REM C:\DOCUME~1\a-rob\LOCALS~1\Temp\prebuild9961.inc;
+1>
+1>Stop.
+BUILD: Examining c:\msnnonboundary01-7776_hsl_v1\private\web\hslmsnwebsite\src directory for files to compile.
+Building generated files in c:\msnnonboundary01-7776_hsl_v1\private\web\hslmsnwebsite\src ********************
+1>'NMAKE.EXE /nologo BUILDMSG=Stop. NTTEST= UMTEST= NOLINK=1 PASS0ONLY=1 386=1'
+1>BUILDMSG: Processing c:\msnnonboundary01-7776_hsl_v1\private\web\hslmsnwebsite\src
+1>
+1>Stop.
+Compiling c:\msnnonboundary01-7776_hsl_v1\private\web\hslmsnwebsite\src directory ********************
+1>'NMAKE.EXE /nologo BUILDMSG=Stop. NTTEST= UMTEST= NOLINK=1 386=1'
+1>BUILDMSG: Processing c:\msnnonboundary01-7776_hsl_v1\private\web\hslmsnwebsite\src
+1>
+1>Stop.
+Executing PASS0 post process scripts  ********************
+Performing PASS0 post process steps...
+1>'c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\buildpass0.cmd -c'
+1>
+1>C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src>call c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\prebuild.cmd /postpass0 
+1>
+1>C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src>nmake /nologo /f c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\prebuild.mak postpass0 
+1>
+1>Stop.
+Linking c:\msnnonboundary01-7776_hsl_v1\private\web\hslmsnwebsite\src directory ********************
+1>'NMAKE.EXE /nologo BUILDMSG=Stop. LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= 386=1'
+1>	:: Copying Utilities.dll and HSLDTOs.dll to the HSLDownloads Bin folder
+1>	IF NOT EXIST .\WebSite\Bin mkdir .\WebSite\Bin
+1>	copy /Y c:\msnnonboundary01-7776_hsl_v1\target\debug\i386\Utilities.dll .\WebSite\Bin\ > filecopy.log
+1>	copy /Y c:\msnnonboundary01-7776_hsl_v1\target\debug\i386\HSLDTOs.dll .\WebSite\Bin\ >> filecopy.log
+1>	copy /Y c:\msnnonboundary01-7776_hsl_v1\private\extern\AntiXssLibrary\AntiXssLibrary.dll .\WebSite\Bin\ >> filecopy.log
+1>Build_Status ASPNET Build : Start build
+1>Build_Status ASPNET Build : Source - / Physical - website Target - c:\msnnonboundary01-7776_hsl_v1\public\distrib\debug\src\hsl_v1\web\HSLMSNWebSite
+1>	C:\WINDOWS\Microsoft.Net\Framework\v2.0.50727\aspnet_compiler.exe -f -fixednames  -v / -p website c:\msnnonboundary01-7776_hsl_v1\public\distrib\%BUILDTYPE%\src\hsl_v1\web\HSLMSNWebSite > out.aspnet &  perl -n -p -e "$_ =~ s/.*error.*/NMAKE : A0001: 'ASPNET_BUILD': $_ /g; $_ =~ s/.*warning.*/Warning : A0001: 'ASPNET_BUILD': $_ /g;" out.aspnet
+1>Utility to precompile an ASP.NET application
+1>Copyright (C) Microsoft Corporation. All rights reserved.
+1>
+1>	:: Copying HSLDownloads bits to target
+1>	copy /Y c:\msnnonboundary01-7776_hsl_v1\public\distrib\%BUILDTYPE%\src\hsl_v1\web\HSLMSNWebSite\bin\*.dll c:\msnnonboundary01-7776_hsl_v1\target\debug\i386 >> filecopy.log
+1>
+1>Stop.
+Executing post build scripts  ********************
+Fix Public Changes
+1>'c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\buildpost.cmd '
+1>
+1>C:\msnnonboundary01-7776_hsl_v1\private\web\HSLMSNWebSite\src>call c:\msnnonboundary01-7776_hsl_v1\public\ext\tools\fix_public.cmd 

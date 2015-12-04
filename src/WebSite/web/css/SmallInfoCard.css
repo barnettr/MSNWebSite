@@ -1,0 +1,107 @@
+
+p {
+	margin: 0px 0px 0px 0px;
+}
+/* 
+for display only 
+the results have been tweaked to fit FF
+*/
+#smallhotspots {
+	position:absolute; 
+	border:solid 1px #b0c6d3; 
+	left:450px; 
+	top:150px; 
+	width:270px; 
+	height:250px;
+	background-color:#fff;
+}
+
+
+#hotspotsTable {
+width: 270px;
+margin: 0px 0px 0px 0px;
+}
+/* end for display only */
+#detailList {
+	margin-top: 20px;
+}
+
+.navButtons {
+vertical-align:middle;
+text-align: right;
+}
+/*
+.title2 is to reflect the changes in 
+the title call - to represent the HIG, 
+use title as your class instead
+*/
+.title2 {
+margin: 0 0 0 0;
+padding: 0px 0px 0px 0px;
+background-color:#ffffff;
+font-size:100%;
+color:#0066a8;
+font-weight:normal;
+}
+/* 
+this p gives the padding for the paragraph
+inside the title2 call
+*/
+.title2 p {
+margin: 0 0 0 0;
+padding: 8px 8px 5px 10px;
+}
+/* offsets the "Page x of y to the same as the arrow */
+.navButtons p {
+margin-right: 8px;
+}
+.headerCell {
+	background-color: #e7eef4;
+}
+.rowLine {
+	border-bottom:1px solid #b0c6d3;
+}
+.imageBorder {
+border:1px solid #d4e1e9;
+}
+.title1 {
+margin: 0 0 0 0;
+padding: 0px 0px 0px 0px;
+background-color:#ffffff;
+font-size:100%;
+color:#424443;
+font-weight:normal;
+background-image: url(../images/misc/SmHomeBackground.gif);
+background-repeat:repeat-x;
+}
+/* 
+this p gives the padding for the paragraph
+inside the title2 call
+*/
+.title1 p {
+margin: 0 0 0 0;
+padding: 8px 8px 5px 10px;
+}
+.indexImage {
+border:1px solid #F07522;
+}
+.indexImages {
+padding-left: 8px;
+width: 111px;
+}
+.amenityImages {
+	padding: 4px 2px 5px 8px;
+}
+.alignRight {
+	padding: 4px 0px 5px 12px;
+}
+.alignHardRight {
+	padding: 4px 0px 5px 16px;
+}
+.leftAlignment {
+	padding-left: 8px;
+}
+.gradientBlue {
+	background-image: url(../images/misc/HomeBackground.gif);
+	background-repeat:repeat-x;
+}

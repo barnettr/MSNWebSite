@@ -1,0 +1,209 @@
+/* ------------------------------------------------------------------
+Source File: NetworkHeader\gtl_01.css header to spec border:1px solid #000000;
+---------------------------------------------------------------------*/
+.msnhead1 {    
+	margin: 0 0 -1.2em 0;    
+	padding: 0.5em 0 0 0;    
+	position: relative;
+	height: 85px;    
+	top: 5px;
+} 
+.msnhead1 a,
+.msnhead1 a:link,
+.msnhead1 a:visited,
+.msnhead1 a:hover,
+.msnhead1 a:active {  
+	background-color: transparent;  
+	color: #183390;  
+	text-decoration: none;
+} 
+.msnhead1 a:hover {  
+	text-decoration: underline;
+} 
+.msnhead1 .bannerad {  
+	border: none;  
+	margin: 0 0 15px 0;  
+	text-align: center;
+} 
+.msnhead1 .site img {  
+	border: none;  
+	margin: 2px 0 0 0;  
+	vertical-align: bottom;
+} 
+.msnhead1 form {    
+	float: right;    
+	margin: 0;    
+	padding: 0;
+} 
+.msnhead1 label {  
+	display: none;
+} 
+.msnhead1 em.passport {    
+	font-style: normal;    
+	font-weight: bold;
+} 
+.msnhead1 .primary,.msnhead1 .secondary {  
+		clear: both;  
+		display: block;
+} 
+.msnhead1 .secondary.empty {    
+	/*padding-top: 1.5em;*/
+} 
+.msnhead1 .primary form {   
+	font-size: 11px;   
+	margin: 0 0.7em 2.15em 1.2em;
+} 
+.msnhead1 .primary input {  
+	border: 1px solid #36b701;  
+	min-width: 195px;  /* target design width, in px */  
+	width: 27.82ex;  /* w3c, Mozilla ex = (Win IE 6 ex)(0.856) */
+} 
+.fixedwidth .msnhead1 .primary input {  
+	width: 195px; /* fixed width */
+} 
+.msnhead1 .primary input.button {  
+	background-color: #36b701;  
+	border: none;  
+	color: #fff;
+	font-family: Tahoma;  
+	font-weight: bold;  
+	margin: 0 0 0.2em -0.3em;  
+	padding: 0.2em 0.7em 0 0;  
+	min-width: 88px; /* target design width, in px */  
+	width: 12.3ex; /* w3c, Mozilla ex = (Win IE 6 ex)(0.856) */
+} 
+.fixedwidth .msnhead1 .primary input.button {  
+	width: 88px; /* fixed width */
+} 
+.msnhead1 .secondary form {  
+	margin: 0 0 0 1.4em;
+} 
+.msnhead1 ul {   
+	list-style-type: none;  
+	margin: 0;  
+	padding: 0;  
+	text-align: right;
+} 
+.msnhead1 li {  
+	display: inline;  
+	line-height: 1.75em;
+} 
+.msnhead1 li a {  
+	white-space: nowrap;
+} 
+.msnhead1 .primary li {  
+	padding: 0 1em 0 0;
+} 
+.msnhead1 .secondary ul {  
+	margin: 0 0.5em 0 0;  
+	padding: 0;
+	bottom: 0px;
+	right: 0px;
+	position: absolute;
+} 
+.msnhead1 .secondary li {  
+	background: url(decoration/pipe-07519a.gif) repeat-y 0 0;  
+	margin: 0;  
+	padding: 0 0.3em 0 0.7em;
+} 
+.msnhead1 .secondary li.first {  
+	background: none;
+} 
+.msnhead1 .secondary li.last {  
+	margin: 0;  
+	padding: 0 0.7em 0 0.7em;
+} 
+.msnhead1 .site {  
+	/*top: 0; 
+	padding-top: 58px;  
+	position: absolute;  
+	white-space: nowrap;*/
+	bottom: 0;  position: absolute;  white-space: nowrap;
+} 
+.msnhead1 .site .name {  
+	bottom: 6px; 
+	font-size: 200%;  
+	font-weight: normal;  
+	position: absolute;  
+	/*vertical-align: bottom;*/
+	vertical-align: bottom; 
+}
+/* ------------------------------------------------------------------
+Source File: 
+networkheader_layout\gtl_01_ie.css Styles specific to Internet Explorer 5, 5.5, 6 or 7 for Windows
+---------------------------------------------------------------------*/ 
+.msnhead1 .primary input {  
+	padding: 0.3em 0.2em 0.2em 0.2em;  
+	width: 32.5ex; /* ex = target design width divided by 6, Win IE 6 */
+} 
+.msnhead1 .primary input.button {  
+	padding: 0.1em 0 0.2em 0;  
+	width: 14.33ex; /* ex = target design width divided by 6, Win IE 6 */
+} 
+.msnhead1 .site .name {  
+	bottom: auto;  
+	position: static;
+}
+/* ------------------------------------------------------------------
+Source File: networkheader_layout/gtl_01_ie5.css Styles specific to Internet Explorer 5 (but not 5.5) for Windows
+---------------------------------------------------------------------*/ 
+.msnhead1 .primary input.button {    
+	height: 20px;    
+	width: 86px;
+} 
+.msnhead1 ul {    
+	float: right;
+} 
+.msnhead1 li {    
+	float: left;
+}
+ 
+ 
+ /* ------------------------------------------------------------------
+ Source File: networkfooter_layout\gtl_01.css 
+ ---------------------------------------------------------------------*/ 
+.msnfoot1 {    
+ 	padding-top: 0.0em;
+	padding-right: 0.3em;
+	padding-left: 1.0em;
+	padding-bottom: 1.0em;
+} 
+.msnfoot1 .primary li {  
+	float: left;  
+	padding: 0 1.4em 0 0.0em;
+} 
+.msnfoot1 .secondary {  
+	text-align: right;
+	margin-right: 6px;
+}  
+.msnfoot1 .secondary a {  
+	white-space: pre;
+} 
+.msnfoot1 .secondary li {  
+	float: right;  
+	padding: 0 0 0 1.0em;
+} 
+.msnfoot1 ul {  
+	list-style-type: none;  
+	margin: 0;  
+	padding: 0;
+}  
+.msnfoot1 ul li.last {  
+	padding: 0 0 0 0;
+} 
+.msnfoot1 .copyright {   
+	background:url(img/msft.gif) no-repeat top right; /* image is 123x20 */    
+	color: #636363;    
+	clear: both;    
+	float: right;    
+	margin-top: 1.2em;
+	margin-right: 0.4em;
+} 
+.msnfoot1 .copyright span {    
+	border-right: 1px solid #636363;    
+	display: block;    
+	line-height: 20px;    
+	margin-right: 133px;    
+	padding-right: 10px;
+}
+
